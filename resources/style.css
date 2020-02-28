@@ -1,0 +1,231 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+/* CSS Document */
+/* Splash Screen CSS */
+.overlay {
+	position: fixed; /* Sit on top of the page content */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	display: table; /* Display by default as table to allow alignment */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url(background.jpg); /* Set background to image */
+	z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+.overlay .inner {
+	display: table-cell; /* Display style to allow alignment of text */
+	vertical-align: middle; /* Align text to middle */
+	width: 100%; /* Full width (cover whole page) */
+	max-width: none; /* Allow content to span full width of page */
+	background-color: rgba(0, 0, 0, 0.50);
+}
+.overlay .content {
+	max-width: 500px; /* Limit content to max 500px width */
+	margin: 0 auto; /* Set margins */
+	text-align: center; /* Allign text to center of page */
+}
+.overlay .content h1 {
+	font-family: 'Staatliches', sans-serif; /* Set font of overlay heading */
+	color: #fff; /* Set colour of heading */
+	text-shadow: 5px 5px 5px #000000; /* Give heading text shadow for visual effect */
+	font-size: 300%; /* Enlarge heading font size */
+}
+.overlay .content p {
+	padding: 10px 0px; /* Add padding to better seperate multiple buttons */
+	color: #fff; /* Set button font colour */
+	font-family: 'Montserrat', sans-serif; /* Set button font */
+	font-weight: bold; /* Make font bold to stand out a bit more */
+}
+.overlay .content a {
+	font-weight: normal !important;
+}
+.btn {
+	border: solid #fff 3px; /* Set border type and give border colour and set border width */
+	border-radius: 6px; /* Set border radius of button */
+	font-family: 'Staatliches', sans-serif; /* Set button font */
+	color: #fff; /* Set button font colour */
+	font-size: 135%; /* Slightly enlarge button font size */
+	padding: 10px 20px; /* Adding padding that border will adhere to */
+	text-transform: uppercase; /* Set given text to uppercase */
+	text-decoration: none; /* Remove hyperlink decoration */
+}
+.btn:hover {
+	color: #fff; /* Change font colour when hovering over button */
+	padding: 13px 23px; /* Change padding to slightly larger */
+	box-shadow: 5px 5px 5px #000000; /* Add shadow on hover */
+	background-color: rgba(255, 255, 255, 0.25); /* Change background colour on hover */
+	cursor: pointer; /* Add a pointer on hover */
+}
+/* Navigation CSS */
+nav {
+	box-sizing: border-box; /* Default box-size to avoid bugs */
+	margin: 0; /* Margin to 0 */
+	padding: 0; /* Padding to zero */
+	position: absolute; /* Set position to rectify spacing */
+	top: 0; /* Set to top */
+	right: 0; /* Set right to edge of display */
+	left: 0; /* Set left to edge of display */
+	display: flex; /* Display to flex */
+	justify-content: space-around; /* Dictate alignment within flex display */
+	align-items: center; /* Aligns items withing flex display */
+	min-height: 8vh; /* Set min-height to 8% viewport */
+	background-color: grey; /* Set background colour of nav */
+	font-family: 'Montserrat', sans-serif; /* Set nav font */
+}
+.logo {
+	color: #ffffff; /* Set logo colour to white */
+	text-transform: uppercase; /* Set logo text to uppercase */
+	letter-spacing: 5px; /* Add letter spacing for stylistic effect */
+	font-size: 150%;
+}
+.nav-links {
+	display: flex; /* Set display to flex */
+	justify-content: space-around; /* Dictate aligment within flex display */
+	width: 45%; /* Set space between links */
+}
+.nav-links a {
+	color: #ffffff; /* Set color of navigation links */
+	text-decoration: none; /* Remove default link style */
+	letter-spacing: 3px; /* Add letter spacing for stylistic effect */
+	font-weight: bold; /* Make link font bold */
+	font-size: 75%; /* Make font smaller */
+}
+.nav-links li {
+	list-style: none; /* Remove list dots */
+}
+.nav-active {
+	transform: translateX(0%) !important; /* Set nav bar onscreen */
+}
+.burger {
+	display: none; /* Hide burger on large screen */
+}
+.burger div {
+	width: 25px; /* Width of lines */
+	height: 3px; /* Height of lines */
+	background-color: #ffffff; /* Change colour of lines */
+	margin: 5px; /* Gives space between lines */
+	transition: all 0.3s ease; /* Transition for burger transform */
+}
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px); /* Create of cross of crosshair */
+}
+.toggle .line2 {
+	opacity: 0; /* Hide middle line */
+}
+.toggle .line3 {
+	transform: rotate(45deg) translate(-5px, -6px); /* Create of cross of crosshair */
+}
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(50%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+@keyframes navLinkFadeAway {
+	from {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(50%);
+	}
+}
+/* Form CSS */
+
+.form {
+	display: table-cell; /* Display style to allow alignment of text */
+	vertical-align: middle; /* Align text to middle */
+	width: 100%; /* Full width (cover whole page) */
+	max-width: none; /* Allow content to span full width of page */
+}
+.form .form-inner {
+	max-width: 500px; /* Limit content to max 500px width */
+	margin: 0px auto; /* Set margins */
+	background-color: rgba(0, 0, 0, 0.50); /* Make background darker */
+	height: 500px;
+}
+.form .form-content {
+	padding-top: 25px;
+	text-align: center; /* Allign text to center of page */
+}
+.form .form-content h1 {
+	font-family: 'Staatliches', sans-serif; /* Set font of overlay heading */
+	color: #fff; /* Set colour of heading */
+	text-shadow: 5px 5px 5px #000000; /* Give heading text shadow for visual effect */
+	font-size: 300%; /* Enlarge heading font size */
+}
+.form .form-content form {
+	color: #fff; /* Set button font colour */
+	font-family: 'Montserrat', sans-serif; /* Set button font */
+	font-weight: bold; /* Make font bold to stand out a bit more */
+}
+
+.form input {
+	margin: 10px;
+}
+
+.form a {
+	text-decoration: none;
+	font-weight: normal !important;
+	color: #fff;
+}
+
+.form .submit {
+	border: solid #fff 3px; /* Set border type and give border colour and set border width */
+	border-radius: 6px; /* Set border radius of button */
+	font-family: 'Staatliches', sans-serif; /* Set button font */
+	color: #fff; /* Set button font colour */
+	font-size: 135%; /* Slightly enlarge button font size */
+	padding: 10px 20px; /* Adding padding that border will adhere to */
+	text-transform: uppercase; /* Set given text to uppercase */
+	text-decoration: none; /* Remove hyperlink decoration */
+	background-color: rgba(0, 0, 0, 0);
+}
+.form .submit:hover {
+	color: #fff; /* Change font colour when hovering over button */
+	padding: 13px 23px; /* Change padding to slightly larger */
+	box-shadow: 5px 5px 5px #000000; /* Add shadow on hover */
+	background-color: rgba(255, 255, 255, 0.25); /* Change background colour on hover */
+	cursor: pointer; /* Add a pointer on hover */
+}
+
+/* Mobile Devices CSS */
+@media screen and (max-width:768px) {
+	body {
+		overflow-x: hidden; /* Hide side scrolling */
+	}
+	.overlay .content h1 {
+		font-size: 200%; /* Smaller font-size for mobile devices */
+	}
+	.btn {
+		font-size: 100%; /* Smaller font-size for mobile devices */
+		padding: 7px 15px; /* Adding padding that border will adhere to */
+	}
+	.nav-links {
+		position: absolute; /* Force position */
+		right: 0px; /* Force navlinks to right */
+		height: 92vh; /* Force to near full screen */
+		top: 8vh; /* Leave space for burger */
+		background-color: grey; /* Set colour of nav bar */
+		display: flex; /* Set display style to flex */
+		flex-direction: column; /* Set flex to column */
+		align-items: center; /* Center nav links */
+		transform: translateX(100%); /* Set nav bar offscreen */
+		transition: transform 0.5s ease-in; /* Transition effect to hide navbar */
+	}
+	.nav-links li {
+		opacity: 0; /* Hide links for transition */
+	}
+	.burger {
+		display: block; /* Display burger when in mobile view */
+		cursor: pointer; /* Show pointer when hovering over burger */
+	}
+}
